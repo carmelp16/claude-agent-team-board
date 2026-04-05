@@ -1,0 +1,42 @@
+# Compiled output
+out/
+dist/
+
+# Dependencies
+node_modules/
+
+# Source maps
+*.js.map
+
+# Packaged extensions
+*.vsix
+
+# VS Code test runner
+.vscode-test/
+
+# Editor settings
+.vscode/
+
+# Claude Code
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Nested project symlinks
+task-list
+
+# Brand/marketing assets
+brand/

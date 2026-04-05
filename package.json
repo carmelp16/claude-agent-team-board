@@ -1,0 +1,58 @@
+{
+  "name": "claude-kanban",
+  "displayName": "Claude Code Kanban",
+  "description": "Read-only Kanban board for Claude Code agent tasks",
+  "version": "0.1.0",
+  "publisher": "claude-code-kanban",
+  "author": "Claude Code Kanban Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claude-code-kanban/claude-code-kanban"
+  },
+  "bugs": {
+    "url": "https://github.com/claude-code-kanban/claude-code-kanban/issues"
+  },
+  "homepage": "https://github.com/claude-code-kanban/claude-code-kanban#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeKanban.openBoard",
+        "title": "Open Claude Kanban Board",
+        "category": "Claude"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Kanban",
+      "properties": {
+        "claude-kanban.tasksDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Claude Code tasks directory. Leave empty for auto-detection (~/.claude/tasks)."
+        },
+        "claude-kanban.teamsDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Claude Code teams directory. Leave empty for auto-detection (~/.claude/teams)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "install-ext": "npm run compile && ln -sf \"$(pwd)\" \"$HOME/.vscode/extensions/claude-kanban\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -16,7 +16,7 @@ When you orchestrate a team of Claude Code sessions, each teammate claims and co
 - **Configurable Task Directory** -- Override the default `~/.claude/tasks/` path in settings
 - **Team Selector** -- Switch between multiple teams with a quick pick menu
 
-![](resources/demo.gif)
+![](https://github.com/ericman93/claude-agent-team-board/blob/main/resources/demo.gif?raw=true)
 
 ## Installation
 

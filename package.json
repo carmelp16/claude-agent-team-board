@@ -2,19 +2,20 @@
   "name": "claude-agent-team-kanban",
   "displayName": "Claude Agent Team Kanban",
   "description": "A Kanban board that displays the internal task list from Claude Code agent teams",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "ericman93",
   "icon": "resources/icon.png",
   "author": "Eric Feldman",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ericf/claude-agent-team-board"
+    "url": "https://github.com/ericman93/claude-agent-team-board"
   },
   "bugs": {
-    "url": "https://github.com/ericf/claude-agent-team-board/issues"
+    "url": "https://github.com/ericman93/claude-agent-team-board/issues"
   },
-  "homepage": "https://github.com/ericf/claude-agent-team-board#readme",
+  "homepage": "https://github.com/ericman93/claude-agent-team-board#readme",
+  "contributing": "https://github.com/ericman93/claude-agent-team-board",
   "engines": {
     "vscode": "^1.85.0"
   },

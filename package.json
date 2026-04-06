@@ -2,7 +2,7 @@
   "name": "claude-agent-team-kanban",
   "displayName": "Claude Agent Team Kanban",
   "description": "A Kanban board that displays the internal task list from Claude Code agent teams",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "publisher": "ericman93",
   "icon": "resources/icon.png",
   "author": "Eric Feldman",

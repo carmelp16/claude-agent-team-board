@@ -1,9 +1,11 @@
-# Claude Code Kanban
+# Claude Agent Team Board
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-%3E%3D1.85.0-blue?logo=visualstudiocode)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A read-only Kanban board for visualizing Claude Code agent tasks inside VS Code.
+A Kanban board that displays the internal task list from [Claude Code agent teams](https://code.claude.com/docs/en/agent-teams) inside VS Code.
+
+When you orchestrate a team of Claude Code sessions, each teammate claims and completes tasks from a shared task list stored on disk. This extension watches that task list and renders it as a live Kanban board so you can see what every teammate is working on at a glance.
 
 ## Features
 
@@ -14,11 +16,13 @@ A read-only Kanban board for visualizing Claude Code agent tasks inside VS Code.
 - **Configurable Task Directory** -- Override the default `~/.claude/tasks/` path in settings
 - **Team Selector** -- Switch between multiple teams with a quick pick menu
 
+![](resources/demo.gif)
+
 ## Installation
 
 ```bash
-git clone https://github.com/ericf/claude-kanban.git
-cd claude-kanban
+git clone https://github.com/ericf/claude-agent-team-board.git
+cd claude-agent-team-board
 npm install
 npm run compile
 ```
@@ -33,7 +37,7 @@ Or package as a `.vsix`:
 
 ```bash
 npx vsce package
-code --install-extension claude-kanban-0.1.0.vsix
+code --install-extension claude-agent-team-board-0.1.1.vsix
 ```
 
 ## Usage
@@ -41,7 +45,7 @@ code --install-extension claude-kanban-0.1.0.vsix
 Open the command palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run:
 
 ```
-Claude: Open Claude Kanban Board
+Claude: Open Agent Team Board
 ```
 
 If multiple teams are detected, you'll be prompted to select one. The board updates automatically as task files change.
@@ -50,12 +54,14 @@ If multiple teams are detected, you'll be prompted to select one. The board upda
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| `claude-kanban.tasksDirectory` | `~/.claude/tasks` (auto-detected) | Path to the Claude Code tasks directory |
-| `claude-kanban.teamsDirectory` | `~/.claude/teams` (auto-detected) | Path to the Claude Code teams directory |
+| `claude-agent-team-board.tasksDirectory` | `~/.claude/tasks` (auto-detected) | Path to the Claude Code tasks directory |
+| `claude-agent-team-board.teamsDirectory` | `~/.claude/teams` (auto-detected) | Path to the Claude Code teams directory |
 
 ## How It Works
 
-The extension reads Claude Code task JSON files from `~/.claude/tasks/` and team configuration files from `~/.claude/teams/`. Each task has a status (`pending`, `in_progress`, or `completed`), an owner, and optional dependency information (`blocks`/`blockedBy`). A file system watcher monitors the task directory for changes and pushes updates to the webview in real time.
+Claude Code [agent teams](https://code.claude.com/docs/en/agent-teams) coordinate through a shared task list stored at `~/.claude/tasks/{team-name}/`. Each task has a status (`pending`, `in_progress`, or `completed`), an owner, and optional dependency information (`blocks`/`blockedBy`). Team configuration lives at `~/.claude/teams/{team-name}/config.json`.
+
+This extension reads those files and renders them as a Kanban board. A file system watcher monitors the task directory for changes and pushes updates to the webview in real time.
 
 ## Development
 

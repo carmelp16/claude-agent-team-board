@@ -38,5 +38,6 @@ npm-debug.log*
 # Nested project symlinks
 task-list
 
-# Brand/marketing assets
+# Internal assets
 brand/
+docs/

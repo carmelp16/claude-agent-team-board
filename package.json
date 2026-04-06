@@ -1,19 +1,20 @@
 {
-  "name": "claude-kanban",
-  "displayName": "Claude Code Kanban",
-  "description": "Read-only Kanban board for Claude Code agent tasks",
-  "version": "0.1.0",
-  "publisher": "claude-code-kanban",
-  "author": "Claude Code Kanban Contributors",
+  "name": "claude-agent-team-kanban",
+  "displayName": "Claude Agent Team Kanban",
+  "description": "A Kanban board that displays the internal task list from Claude Code agent teams",
+  "version": "0.1.4",
+  "publisher": "ericman93",
+  "icon": "resources/icon.png",
+  "author": "Eric Feldman",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/claude-code-kanban/claude-code-kanban"
+    "url": "https://github.com/ericf/claude-agent-team-board"
   },
   "bugs": {
-    "url": "https://github.com/claude-code-kanban/claude-code-kanban/issues"
+    "url": "https://github.com/ericf/claude-agent-team-board/issues"
   },
-  "homepage": "https://github.com/claude-code-kanban/claude-code-kanban#readme",
+  "homepage": "https://github.com/ericf/claude-agent-team-board#readme",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -24,20 +25,20 @@
   "contributes": {
     "commands": [
       {
-        "command": "claudeKanban.openBoard",
-        "title": "Open Claude Kanban Board",
+        "command": "claudeAgentTeamBoard.openBoard",
+        "title": "Open Agent Team Board",
         "category": "Claude"
       }
     ],
     "configuration": {
-      "title": "Claude Kanban",
+      "title": "Claude Agent Team Board",
       "properties": {
-        "claude-kanban.tasksDirectory": {
+        "claude-agent-team-board.tasksDirectory": {
           "type": "string",
           "default": "",
           "description": "Path to Claude Code tasks directory. Leave empty for auto-detection (~/.claude/tasks)."
         },
-        "claude-kanban.teamsDirectory": {
+        "claude-agent-team-board.teamsDirectory": {
           "type": "string",
           "default": "",
           "description": "Path to Claude Code teams directory. Leave empty for auto-detection (~/.claude/teams)."
@@ -48,7 +49,8 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "install-ext": "npm run compile && ln -sf \"$(pwd)\" \"$HOME/.vscode/extensions/claude-kanban\""
+    "install-ext": "npm run compile && ln -sf \"$(pwd)\" \"$HOME/.vscode/extensions/claude-agent-team-board\"",
+    "export": "vsce package"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",

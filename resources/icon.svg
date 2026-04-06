@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Background -->
+  <rect x="8" y="8" width="240" height="240" rx="32" ry="32" fill="#252526"/>
+
+  <!-- Column 1: Pending (Amber) -->
+  <!-- Column header -->
+  <rect x="32" y="36" width="56" height="6" rx="3" fill="#e8a317"/>
+  <!-- Card 1 -->
+  <rect x="32" y="54" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="32" y="54" width="56" height="5" rx="3" fill="#e8a317" opacity="0.8"/>
+  <!-- Card 2 -->
+  <rect x="32" y="96" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="32" y="96" width="56" height="5" rx="3" fill="#e8a317" opacity="0.8"/>
+  <!-- Card 3 -->
+  <rect x="32" y="138" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="32" y="138" width="56" height="5" rx="3" fill="#e8a317" opacity="0.8"/>
+
+  <!-- Column 2: In Progress (Blue) -->
+  <!-- Column header -->
+  <rect x="100" y="36" width="56" height="6" rx="3" fill="#3794ff"/>
+  <!-- Card 1 -->
+  <rect x="100" y="54" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="100" y="54" width="56" height="5" rx="3" fill="#3794ff" opacity="0.8"/>
+  <!-- Card 2 -->
+  <rect x="100" y="96" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="100" y="96" width="56" height="5" rx="3" fill="#3794ff" opacity="0.8"/>
+
+  <!-- Column 3: Completed (Teal) -->
+  <!-- Column header -->
+  <rect x="168" y="36" width="56" height="6" rx="3" fill="#4ec9b0"/>
+  <!-- Card 1 -->
+  <rect x="168" y="54" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="168" y="54" width="56" height="5" rx="3" fill="#4ec9b0" opacity="0.8"/>
+  <!-- Card 2 -->
+  <rect x="168" y="96" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="168" y="96" width="56" height="5" rx="3" fill="#4ec9b0" opacity="0.8"/>
+  <!-- Card 3 -->
+  <rect x="168" y="138" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="168" y="138" width="56" height="5" rx="3" fill="#4ec9b0" opacity="0.8"/>
+  <!-- Card 4 -->
+  <rect x="168" y="180" width="56" height="32" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="168" y="180" width="56" height="5" rx="3" fill="#4ec9b0" opacity="0.8"/>
+
+  <!-- Claude Code sparkle badge (bottom-right) -->
+  <g transform="translate(182, 206)">
+    <!-- Badge background -->
+    <circle cx="32" cy="32" r="30" fill="#252526" stroke="#D97757" stroke-width="2.5"/>
+    <!-- Claude sparkle/asterisk -->
+    <g transform="translate(32, 32)" fill="#D97757">
+      <!-- Vertical bar -->
+      <rect x="-3.5" y="-18" width="7" height="36" rx="3.5"/>
+      <!-- Horizontal bar -->
+      <rect x="-18" y="-3.5" width="36" height="7" rx="3.5"/>
+      <!-- Diagonal bar (top-left to bottom-right) -->
+      <rect x="-3.5" y="-18" width="7" height="36" rx="3.5" transform="rotate(45)"/>
+      <!-- Diagonal bar (top-right to bottom-left) -->
+      <rect x="-3.5" y="-18" width="7" height="36" rx="3.5" transform="rotate(-45)"/>
+    </g>
+  </g>
+</svg>

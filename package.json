@@ -2,7 +2,7 @@
   "name": "claude-agent-team-kanban",
   "displayName": "Claude Agent Team Kanban",
   "description": "A Kanban board that displays the internal task list from Claude Code agent teams",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "ericman93",
   "icon": "resources/icon.png",
   "author": "Eric Feldman",
@@ -22,6 +22,7 @@
   "categories": [
     "Visualization"
   ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -50,7 +51,7 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "install-ext": "npm run compile && ln -sf \"$(pwd)\" \"$HOME/.vscode/extensions/claude-agent-team-board\"",
+    "install-ext": "npm run compile && ln -sf \"$(pwd)\" \"$HOME/.vscode/extensions/ericman93.claude-agent-team-board\"",
     "export": "vsce package"
   },
   "devDependencies": {

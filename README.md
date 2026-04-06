@@ -18,37 +18,17 @@ When you orchestrate a team of Claude Code sessions, each teammate claims and co
 
 ![](https://github.com/ericman93/claude-agent-team-board/blob/main/resources/demo.gif?raw=true)
 
-## Installation
-
-```bash
-git clone https://github.com/ericf/claude-agent-team-board.git
-cd claude-agent-team-board
-npm install
-npm run compile
-```
-
-To install locally, symlink into your VS Code extensions directory:
-
-```bash
-npm run install-ext
-```
-
-Or package as a `.vsix`:
-
-```bash
-npx vsce package
-code --install-extension claude-agent-team-board-0.1.1.vsix
-```
 
 ## Usage
 
-Open the command palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run:
+1. Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ericman93.claude-agent-team-kanban).
+2. Open the command palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+3. Type and select **Claude: Open Agent Team Board**
+4. If multiple teams are detected, pick one from the dropdown
 
-```
-Claude: Open Agent Team Board
-```
+The board updates automatically as task files change on disk — no manual refresh needed!
 
-If multiple teams are detected, you'll be prompted to select one. The board updates automatically as task files change.
+![Opening the board](resources/open.png)
 
 ## Configuration
 

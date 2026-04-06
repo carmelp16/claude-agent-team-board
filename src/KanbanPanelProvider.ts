@@ -20,7 +20,7 @@ export class KanbanPanelProvider implements vscode.Disposable {
     }
 
     this.panel = vscode.window.createWebviewPanel(
-      'claudeKanban',
+      'claudeAgentTeamBoard',
       'Claude Kanban',
       vscode.ViewColumn.One,
       {
@@ -46,7 +46,7 @@ export class KanbanPanelProvider implements vscode.Disposable {
     }, null, this.disposables);
 
     vscode.workspace.onDidChangeConfiguration((e) => {
-      if (e.affectsConfiguration('claude-kanban') && this.currentTeam) {
+      if (e.affectsConfiguration('claude-agent-team-board') && this.currentTeam) {
         this.selectTeam(this.currentTeam);
       }
     }, null, this.disposables);
